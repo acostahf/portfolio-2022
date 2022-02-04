@@ -1,0 +1,30 @@
+.container {
+  background-color: var(--blue-8);
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 40px;
+  color: var(--gray-1);
+
+  h1 {
+    font-size: var(--font-size-8);
+  }
+
+  p {
+    font-size: var(--font-size-4);
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
