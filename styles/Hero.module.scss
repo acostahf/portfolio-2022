@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--blue-8);
+  // background-color: var(--blue-8);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -24,7 +24,73 @@
 
 @media (max-width: 768px) {
   .wrapper {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+  }
+  .button_one {
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+    border-radius: var(--radius-blob-2);
   }
 }
+
+.buttons {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  // height: 600px;
+  width: var(--font-size-3);
+  flex-wrap: 1;
+
+  button {
+    background: var(--gradient-24);
+    color: white;
+    font-size: var(--font-size-3);
+    padding-inline: var(--size-8);
+    padding-block: var(--size-8);
+    box-shadow: var(--shadow-2);
+    animation: var(--animation-float);
+
+    &:hover {
+      animation: var(--animation-scale-up) forwards;
+      animation-timing-function: var(--ease-squish-4);
+      z-index: 2;
+    }
+  }
+}
+
+.button_one {
+  position: relative;
+  bottom: 90px;
+  left: 180px;
+  border-radius: var(--radius-blob-2);
+}
+.button_two {
+  position: relative;
+  border-radius: var(--radius-blob-1);
+  top: 50px;
+}
+.button_three {
+  position: relative;
+  border-radius: var(--radius-blob-4);
+}
+
+.heading,
+.buttons {
+  animation: var(--animation-scale-down) reverse,
+    var(--animation-fade-out) reverse;
+  animation-timing-function: var(--ease-squish-5);
+  animation-duration: 1s;
+}
+
+/* Decorative styles */
+// .grower {
+//   width: 200px;
+//   height: 80px;
+//   background: lightseagreen;
+//   position: relative;
+//   margin-left: auto;
+//   margin-right: auto;
+// }

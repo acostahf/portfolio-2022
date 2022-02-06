@@ -1,0 +1,12 @@
+.container {
+  background-color: var(--blue-8);
+  color: var(--gray-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--size-8);
+}
+.content {
+  display: grid;
+  gap: var(--size-1);
+}

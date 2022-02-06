@@ -1,0 +1,27 @@
+.img {
+  border-radius: var(--radius-4);
+  padding: 10px;
+}
+.img_wrapper {
+  padding-inline: 10px;
+  max-width: 500px;
+  //   border-radius: var(--radius-4);
+}
+
+.heading {
+  display: flex;
+
+  padding-inline: 25px;
+  //   width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  display: flex;
+}
+.icon {
+  height: 50px;
+  width: 50px;
+}
