@@ -6,6 +6,7 @@ import client from "../apolloClient";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Projects from "../components/Projects";
+import Contact from "../components/Contact";
 
 export default function Home({ data }) {
   return (
@@ -19,6 +20,7 @@ export default function Home({ data }) {
       <Hero />
       <Projects {...data} />
       <About />
+      <Contact />
     </div>
   );
 }
