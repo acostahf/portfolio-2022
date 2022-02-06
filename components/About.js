@@ -5,7 +5,9 @@ const About = () => {
     <div className={styles.container}>
       <div className={styles.content}>
         <h1>About ME!</h1>
-        <p>Hello! I'm Fabian, a software developer based in Austin, TX.</p>
+        <p>
+          Hello! I&apos;'m Fabian, a software developer based in Austin, TX.
+        </p>
         <p>
           I love being part of a team to make a vision into a reality online and
           have grown to enjoy the front end side of development, whether that is

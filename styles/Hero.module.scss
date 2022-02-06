@@ -17,6 +17,9 @@
     text-shadow: -1px 0 var(--indigo-6), 0 1px var(--indigo-6),
       1px 0 var(--indigo-6), 0 -1px var(--indigo-6);
   }
+  span {
+    vertical-align: text-bottom;
+  }
 
   p {
     font-size: var(--font-size-4);
