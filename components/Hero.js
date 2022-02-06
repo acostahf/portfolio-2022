@@ -11,8 +11,7 @@ const Hero = () => {
             <span>&#47;&#47;</span> A Software Developer
           </h2>
           <p>
-            I love to build experiences that are user-friendly, modern, and just
-            FUN!
+            Building experiences that are user-friendly, modern, and just FUN!
           </p>
         </div>
         <div className={styles.buttons}>

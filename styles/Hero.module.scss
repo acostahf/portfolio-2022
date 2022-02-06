@@ -1,5 +1,4 @@
 .container {
-  // background-color: var(--blue-8);
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -41,9 +40,7 @@
 
 .buttons {
   display: flex;
-  // justify-content: center;
   align-items: center;
-  // height: 600px;
   width: var(--font-size-3);
   flex-wrap: 1;
 
@@ -103,13 +100,3 @@
   animation-timing-function: var(--ease-squish-5);
   animation-duration: 1s;
 }
-
-/* Decorative styles */
-// .grower {
-//   width: 200px;
-//   height: 80px;
-//   background: lightseagreen;
-//   position: relative;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
