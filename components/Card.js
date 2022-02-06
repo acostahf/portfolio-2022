@@ -12,6 +12,7 @@ const Card = (props) => {
     <div key={props.key} className={styles.card}>
       <div className={styles.img_wrapper}>
         <Image
+          key={props.i}
           src={props.thumbnail}
           height={768}
           width={1100}
