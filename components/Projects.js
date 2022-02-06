@@ -1,40 +1,25 @@
 import React from "react";
 import Image from "next/image";
-import {
-  ExternalLinkIcon,
-  CodeIcon,
-  MenuAlt4Icon,
-} from "@heroicons/react/solid";
 import styles from "../styles/Projects.module.scss";
 
-const Projects = () => {
+import Card from "./Card";
+
+const Projects = (data) => {
   return (
-    <div>
-      <div className={styles.card}>
-        <div className={styles.img_wrapper}>
-          <Image
-            src="/assets/tlocs.png"
-            height="769"
-            width="1183"
-            alt="card image"
-            className={styles.img}
+    <div className={styles.container}>
+      {data.projects.map((project, i) => {
+        // console.log(data.assets[i]);
+        const imgUrl = data.assets[i];
+        // console.log(imgUrl.url);
+        return (
+          <Card
+            key={i}
+            title={project.title}
+            thumbnail={imgUrl.url}
+            alt={project.title}
           />
-        </div>
-        <div className={styles.heading}>
-          <h2>Title</h2>
-          <div className={styles.icons}>
-            <a href="#">
-              <ExternalLinkIcon className={styles.icon} />
-            </a>
-            <a href="#">
-              <CodeIcon className={styles.icon} />
-            </a>
-            <a href="#">
-              <MenuAlt4Icon className={styles.icon} />
-            </a>
-          </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

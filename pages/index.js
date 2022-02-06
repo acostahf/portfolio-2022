@@ -1,11 +1,13 @@
 import styles from "../styles/Home.module.scss";
 import Head from "next/head";
 import Image from "next/image";
+import { gql } from "@apollo/client";
+import client from "../apolloClient";
 import Hero from "../components/Hero";
 import About from "../components/About";
 import Projects from "../components/Projects";
 
-export default function Home() {
+export default function Home({ data }) {
   return (
     <div className={styles.main}>
       <Head>
@@ -15,8 +17,36 @@ export default function Home() {
       </Head>
 
       <Hero />
-      <Projects />
+      <Projects {...data} />
       <About />
     </div>
   );
+}
+
+export async function getStaticProps() {
+  const { data: data } = await client
+    .query({
+      query: gql`
+        query {
+          projects {
+            title
+            description
+          }
+          assets {
+            url
+            width
+            height
+          }
+        }
+      `,
+    })
+    .catch((err) => {
+      return { data: "There was an error!" };
+    });
+  // console.log(data);
+  return {
+    props: {
+      data,
+    },
+  };
 }
