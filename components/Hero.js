@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Hero.module.scss";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Hero = () => {
   return (
@@ -16,13 +17,19 @@ const Hero = () => {
         </div>
         <div className={styles.buttons}>
           <div className={styles.one}>
-            <button className={styles.button_one}>About</button>
+            <Link activeClass="active" to="about" spy={true}>
+              <button className={styles.button_one}>About</button>
+            </Link>
           </div>
           <div>
-            <button className={styles.button_two}>Projects</button>
+            <Link activeClass="active" to="projects" spy={true}>
+              <button className={styles.button_two}> Projects </button>
+            </Link>
           </div>
           <div>
-            <button className={styles.button_three}>Contact</button>
+            <Link activeClass="active" to="contact" spy={true}>
+              <button className={styles.button_three}>Contact</button>
+            </Link>
           </div>
         </div>
       </div>
