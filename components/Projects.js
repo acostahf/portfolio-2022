@@ -16,6 +16,8 @@ const Projects = (data) => {
             key={i}
             title={project.title}
             thumbnail={imgUrl.url}
+            website={project.website}
+            github={project.github}
             alt={project.title}
           />
         );

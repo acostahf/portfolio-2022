@@ -31,6 +31,8 @@ export async function getStaticProps() {
           projects {
             title
             description
+            github
+            website
           }
           assets {
             url

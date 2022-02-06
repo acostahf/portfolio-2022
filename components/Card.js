@@ -22,15 +22,15 @@ const Card = (props) => {
       <div className={styles.heading}>
         <h2>{props.title}</h2>
         <div className={styles.icons}>
-          <a href="#">
+          <a href={props.website}>
             <ExternalLinkIcon className={styles.icon} />
           </a>
-          <a href="#">
+          <a href={props.github}>
             <CodeIcon className={styles.icon} />
           </a>
-          <a href="#">
+          {/* <a href="#">
             <MenuAlt4Icon className={styles.icon} />
-          </a>
+          </a> */}
         </div>
       </div>
     </div>
