@@ -9,7 +9,6 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
 export default function Home({ data }) {
-	console.log("homepage", data);
 	return (
 		<div className={styles.main}>
 			<Head>
@@ -34,13 +33,13 @@ export async function getStaticProps() {
 		.query({
 			query: gql`
 				query {
-					projects {
+					projects(first: 20) {
 						description
 						id
 						title
 						website
 					}
-					assets {
+					assets(first: 20) {
 						url
 						width
 						height

@@ -9,21 +9,23 @@ import {
 
 const Card = (props) => {
 	return (
-		<div key={props.key} className={styles.card}>
+		<div key={props?.key} className={styles.card}>
 			<div className={styles.img_wrapper}>
-				<Image
-					src={props.thumbnail}
-					height={668}
-					width={1100}
-					alt={props.alt}
-					className={styles.img}
-				/>
+				{props.thumbnail && (
+					<Image
+						src={props?.thumbnail}
+						height={668}
+						width={1100}
+						alt={props?.alt}
+						className={styles.img}
+					/>
+				)}
 			</div>
 			<div className={styles.heading}>
-				<h2>{props.title}</h2>
-				{props.website && (
+				<h2 className={styles.label}>{props?.title}</h2>
+				{props?.website && (
 					<div className={styles.icons}>
-						<a href={props.website}>
+						<a href={props?.website}>
 							<ExternalLinkIcon className={styles.icon} />
 						</a>
 						{/* <a href={props.github}>

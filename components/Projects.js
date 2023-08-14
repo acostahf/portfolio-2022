@@ -5,7 +5,7 @@ import styles from "../styles/Projects.module.scss";
 import Card from "./Card";
 
 const Projects = (data) => {
-	console.log(data);
+	console.log(data.assets);
 	return (
 		<div id="projects" className={styles.container}>
 			{data.projects.map((project, i) => {
@@ -15,11 +15,11 @@ const Projects = (data) => {
 				return (
 					<div key={i}>
 						<Card
-							title={project.title}
-							thumbnail={imgUrl.url}
-							website={project.website}
-							github={project.github}
-							alt={project.title}
+							title={project?.title}
+							thumbnail={imgUrl?.url}
+							website={project?.website}
+							github={project?.github}
+							alt={project?.title}
 						/>
 					</div>
 				);
