@@ -9,51 +9,52 @@ import Projects from "../components/Projects";
 import Contact from "../components/Contact";
 
 export default function Home({ data }) {
-  return (
-    <div className={styles.main}>
-      <Head>
-        <title>Fabian Codes</title>
-        <meta
-          name="description"
-          content="Fabian's Software Developer Portfolio"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+	console.log("homepage", data);
+	return (
+		<div className={styles.main}>
+			<Head>
+				<title>Fabian Codes</title>
+				<meta
+					name="description"
+					content="Fabian's Software Developer Portfolio"
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 
-      <Hero />
-      <Projects {...data} />
-      <About />
-      <Contact />
-    </div>
-  );
+			<Hero />
+			<Projects {...data} />
+			<About />
+			<Contact />
+		</div>
+	);
 }
 
 export async function getStaticProps() {
-  const { data: data } = await client
-    .query({
-      query: gql`
-        query {
-          projects {
-            title
-            description
-            github
-            website
-          }
-          assets {
-            url
-            width
-            height
-          }
-        }
-      `,
-    })
-    .catch((err) => {
-      return { data: "There was an error!" };
-    });
-  // console.log(data);
-  return {
-    props: {
-      data,
-    },
-  };
+	const { data: data } = await client
+		.query({
+			query: gql`
+				query {
+					projects {
+						description
+						id
+						title
+						website
+					}
+					assets {
+						url
+						width
+						height
+					}
+				}
+			`,
+		})
+		.catch((err) => {
+			return { data: "There was an error!" };
+		});
+	// console.log(data);
+	return {
+		props: {
+			data,
+		},
+	};
 }
