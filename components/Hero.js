@@ -7,13 +7,13 @@ const Hero = () => {
 		<div className={styles.container}>
 			<div className={styles.wrapper}>
 				<div className={styles.heading}>
-					<h1>Hello, Im Fabian</h1>
+					<h1>Hi, I&apos;m Fabian</h1>
 					<h2>
 						<span>&#47;&#47;</span> A Software Engineer
 					</h2>
 					<p>
-						Building experiences that are user-friendly, modern, and simply
-						FUN!
+						Building experiences that are user-friendly, modern, and
+						exciting!
 					</p>
 				</div>
 				<div className={styles.buttons}>

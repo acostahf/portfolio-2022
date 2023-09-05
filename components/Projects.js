@@ -13,15 +13,16 @@ const Projects = (data) => {
 				const imgUrl = data.assets[i];
 				// console.log(imgUrl.url);
 				return (
-					<div key={i}>
+					<>
 						<Card
+							key={i}
 							title={project?.title}
 							thumbnail={imgUrl?.url}
 							website={project?.website}
 							github={project?.github}
 							alt={project?.title}
 						/>
-					</div>
+					</>
 				);
 			})}
 		</div>

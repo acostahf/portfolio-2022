@@ -1,8 +1,15 @@
 .main {
-  min-height: 100vh;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	min-height: 100vh;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--stone-9);
+}
+
+@media (prefers-color-scheme: light) {
+	.main {
+		--stone-9: var(--gray-2);
+	}
 }

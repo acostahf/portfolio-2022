@@ -7,9 +7,10 @@
 	padding: 10px;
 }
 .img_wrapper {
+	position: relative;
 	padding-inline: 10px;
-	max-width: 500px;
-	//   border-radius: var(--radius-4);
+
+	// max-width: 200px;
 }
 
 .heading {
@@ -24,12 +25,24 @@
 
 .icons {
 	display: flex;
+	align-self: flex-start;
 }
 .icon {
-	height: 50px;
-	width: 50px;
+	height: 30px;
+	width: 30px;
 }
 .label {
 	font-size: 30px;
 	font-weight: 600;
+}
+@media (max-width: 768px) {
+	.img_wrapper {
+		width: 100%;
+	}
+
+	.label {
+		font-size: 24px; /* Adjust as needed */
+	}
+
+	/* You can add more styles as needed for smaller screens */
 }

@@ -16,6 +16,8 @@ const Card = (props) => {
 						src={props?.thumbnail}
 						height={668}
 						width={1100}
+						// fill={true}
+						// objectFit="cover"
 						alt={props?.alt}
 						className={styles.img}
 					/>
