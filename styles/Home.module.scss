@@ -10,6 +10,11 @@
 
 @media (prefers-color-scheme: light) {
 	.main {
-		--stone-9: var(--gray-2);
+		--stone-9: var(--gray-3);
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.main {
+		--stone-9: var(--stone-9);
 	}
 }
